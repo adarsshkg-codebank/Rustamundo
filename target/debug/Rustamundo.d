@@ -1,1 +1,1 @@
-/home/adarssh/dev/hecto/hecto/target/debug/Rustamundo: /home/adarssh/dev/hecto/hecto/src/editor/terminal.rs /home/adarssh/dev/hecto/hecto/src/editor.rs /home/adarssh/dev/hecto/hecto/src/main.rs
+/home/adarssh/dev/Rustamundo/Rustamundo/target/debug/Rustamundo: /home/adarssh/dev/Rustamundo/Rustamundo/src/editor/terminal.rs /home/adarssh/dev/Rustamundo/Rustamundo/src/editor.rs /home/adarssh/dev/Rustamundo/Rustamundo/src/main.rs

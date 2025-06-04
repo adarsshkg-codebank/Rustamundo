@@ -65,10 +65,10 @@ impl Editor {
 
     fn draw_welcome_message() -> Result<(), Error> {
         let mut welcome = format!("{NAME} -- version {VERSION}");
-        let width = Terminal::size()?.width as usize;
+        let width = Terminal::size()?.width;
         let len = welcome.len();
-        let padding = (width - len) / 2;
-        let spaces = " ".repeat(padding - 1);
+        let padding = (width.saturating_sub(len)) / 2;
+        let spaces = " ".repeat(padding.saturating_sub(1));
         welcome = format!("~{spaces}{welcome}");
         welcome.truncate(width);
         Terminal::print(welcome)?;
@@ -89,7 +89,7 @@ impl Editor {
             } else {
                 Self::draw_empty_row()?;
             }
-            if current_row + 1 < height {
+            if current_row.saturating_add(1) < height {
                 Terminal::print("\r\n")?;
             }
         }
